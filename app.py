@@ -1,9 +1,13 @@
+import os
 from flask import Flask, render_template, request
 from pymongo import MongoClient
+from dotenv import load_dotenv
 import datetime
 
+load_dotenv()
+
 app = Flask(__name__)
-client = MongoClient("mongodb+srv://alexandermutebi:Alienware14@pocketbook.whuegz3.mongodb.net/test")
+client = MongoClient(os.environ.get("MONGODB_URI"))
 app.db = client.PocketBook
 
 entries = []
