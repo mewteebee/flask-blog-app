@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+img {
+    height: 22px;
+    width: 22px;
+    margin-right: 10px;
+}
+
+.navbar {
+    max-width: 720px;
+    margin: 50px auto;
+    padding: 0 20px; 
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 24px;
+}
+
+.navbar-brand {
+    display: flex; 
+    align-items: center;
+}
+
+.navbar-navigation {
+    display: flex; 
+    flex-direction: row;
+    padding: 0;
+    list-style: none;
+    color: #5c6b70;
+}
+
+.navbar-navigation-item {
+    margin-left: 50px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-link:hover {
+    text-decoration: underline; 
+    color: black; 
+}
+
+.main {
+    height: 100vh;
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.form {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.form-label {
+    display: block; 
+    margin-bottom: 10px;
+    font-style: italic; 
+}
+
+.form-textarea {
+    font-family: 'Rubik', sans-serif;
+    width: inherit;
+    height: auto; 
+    font-size: 18px;
+    padding: 12px 20px; 
+    border: none; 
+    background-color: #f3f6f6;
+    margin-bottom: 5px; 
+}
+
+.form-submit {
+    background-color: black;
+    border: none; 
+    font-size: 18px; 
+    font-weight: bold; 
+    padding: 5px 30px; 
+    border-radius: 10px; 
+    color: white; 
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: gray;
+}
+
+.entry {
+    margin-top: 50px; 
+}
+
+.entry-title {
+    display: inline;
+    font-size: 18px; 
+}
+
+.entry-date {
+    color: #5c6b70;
+}
+
+.entry-content {
+    font-size: 16px; 
+    line-height: 150%; 
+}
+
+.footer {
+    background-color: black;
+    padding: 40px 0;
+    margin-top: 50px;
+    border-top: 4px solid black;
+    color: white;
+    font-size: 12px;
+}
+
+.footer-content {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer .left {
+    flex-grow: 2; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.footer .right {
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: row; 
+}
+
+.footer-column {
+    display: flex; 
+    flex-direction: column; 
+    margin-left: 50px; 
+}
+
+.footer-item {
+    margin-bottom: 5px;
+    color: inherit; 
+    text-decoration: none;
+}
+
+.footer-item:hover {
+    text-decoration: underline;
+}

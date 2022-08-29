@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <title>PocketBook</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-brand">
+        <img src="/static/images/pencil-4.png" alt="pencil-logo" />
+        PocketBook
+      </div>
+      <ul class="navbar-navigation">
+        <li class="navbar-navigation-item">
+          <a href="#" class="navbar-link">Recents</a>
+        </li>
+        <li class="navbar-navigation-item">
+          <a href="#" class="navbar-link">Calendar</a>
+        </li>
+      </ul>
+    </header>
+    <main class="main">
+      <section>
+        <h1>New Entry:</h1>
+        <form class="form" method="POST">
+          <p class="form-input">
+            <label class="form-label" for="entry">Type text here</label>
+            <textarea
+              name="content"
+              id="entry"
+              class="form-textarea"
+              aria-label="Entry Content"
+            ></textarea>
+          </p>
+          <button type="submit" class="form-submit">Add entry</button>
+        </form>
+      </section>
+      <section>
+        <h1>Recent Posts</h1>
+
+        {% for entry in entries %}
+        <article class="entry">
+          <div>
+            <h2 class="entry-title">{{ entry[0] | truncate(30, true)}}</h2>
+            <time class="entry-date" datetime="{{ entry[1] }}">
+              | {{ entry[2] }}</time
+            >
+          </div>
+
+          <p class="entry-content">{{ entry[0] }}</p>
+        </article>
+        {% endfor %}
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <section class="left">
+          <a href="" class="footer-item"> GitHub </a>
+          <a href="" class="footer-item"> Linkedin </a>
+        </section>
+        <section class="right">
+          <div class="footer-column">
+            <a href="#" class="footer-item">Calendar</a>
+            <a href="#" class="footer-item">Recent</a>
+          </div>
+          <div class="footer-column">
+            <a href="#" class="footer-item">About</a>
+            <a href="#" class="footer-item">Links</a>
+          </div>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
