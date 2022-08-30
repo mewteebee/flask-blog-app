@@ -41,7 +41,17 @@
       <section>
         <h1>Recent Posts</h1>
 
-        {% for entry in entries %}
+        {% if entries|length == 0 %}
+
+        <article class="no-entries-body">
+          <div class="no-entries-div">
+            <h3 class="no-entries-text">
+              No entries yet... post something!
+            </h3>
+          </div>
+        </article>
+
+        {% else %} {% for entry in entries %}
         <article class="entry">
           <div>
             <h2 class="entry-title">{{ entry[0] | truncate(30, true)}}</h2>
@@ -52,14 +62,26 @@
 
           <p class="entry-content">{{ entry[0] }}</p>
         </article>
-        {% endfor %}
+        {% endfor %} {% endif %}
       </section>
     </main>
     <footer class="footer">
       <div class="footer-content">
         <section class="left">
-          <a href="" class="footer-item"> GitHub </a>
-          <a href="" class="footer-item"> Linkedin </a>
+          <a
+            href="https://github.com/mewteebee"
+            target="_blank"
+            class="footer-item"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/alexander-mutebi/"
+            target="_blank"
+            class="footer-item"
+          >
+            Linkedin
+          </a>
         </section>
         <section class="right">
           <div class="footer-column">

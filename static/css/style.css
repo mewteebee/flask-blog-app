@@ -119,13 +119,27 @@ img {
     line-height: 150%; 
 }
 
+.no-entries-body {
+    margin-top: 100px; 
+}
+
+.no-entries-text {
+    text-align: center;
+    font-style: italic;
+    color:#f5f5f5;
+}
+
+.no-entries-text:hover {
+    color:#cdcdcd;
+}
+
 .footer {
     background-color: black;
     padding: 40px 0;
     margin-top: 50px;
     border-top: 4px solid black;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .footer-content {
