@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&display=swap');
 
 body {
     margin: 0;
@@ -76,7 +76,7 @@ img {
 }
 
 .form-textarea {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Crimson Pro', serif;
     width: inherit;
     height: auto; 
     font-size: 18px;
